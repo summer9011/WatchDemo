@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iBeacons" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbp-hf-7k2">
+                                <rect key="frame" x="264" y="290" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exv-46-Z5t">
+                                <rect key="frame" x="276" y="341" width="51" height="31"/>
+                                <connections>
+                                    <action selector="controlState:" destination="vXZ-lx-hvc" eventType="valueChanged" id="pvB-ta-efu"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="exv-46-Z5t" secondAttribute="centerX" id="7VQ-k2-I9w"/>
+                            <constraint firstItem="exv-46-Z5t" firstAttribute="top" secondItem="dbp-hf-7k2" secondAttribute="bottom" constant="30" id="Sbc-ML-z2j"/>
+                            <constraint firstAttribute="centerX" secondItem="dbp-hf-7k2" secondAttribute="centerX" id="qkf-Zh-AaW"/>
+                            <constraint firstAttribute="centerY" secondItem="dbp-hf-7k2" secondAttribute="centerY" id="zf0-h3-khR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="switchControl" destination="exv-46-Z5t" id="5of-JF-rfa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Second Controller-->
+        <scene sceneID="7ky-AR-9BP">
+            <objects>
+                <viewController storyboardIdentifier="SecondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZFH-VU-zTs" customClass="SecondController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0CA-4e-qTB"/>
+                        <viewControllerLayoutGuide type="bottom" id="uWh-yg-2k5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="35y-Tc-lWj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auW-2E-jU7">
+                                <rect key="frame" x="279" y="93" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNh-HN-LnF">
+                                <rect key="frame" x="285" y="158" width="30" height="30"/>
+                                <state key="normal" title="返回">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="ZFH-VU-zTs" eventType="touchUpInside" id="7b8-q7-vAw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="XNh-HN-LnF" secondAttribute="centerX" id="Qj3-EB-e08"/>
+                            <constraint firstAttribute="centerX" secondItem="auW-2E-jU7" secondAttribute="centerX" id="h9r-hf-wVe"/>
+                            <constraint firstItem="XNh-HN-LnF" firstAttribute="top" secondItem="auW-2E-jU7" secondAttribute="bottom" constant="50" id="nA0-Zz-YOJ"/>
+                            <constraint firstItem="auW-2E-jU7" firstAttribute="top" secondItem="0CA-4e-qTB" secondAttribute="bottom" constant="70" id="nDi-Am-HvS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="auW-2E-jU7" id="jlP-NA-ZDg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pgh-gQ-Jgk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989" y="357"/>
+        </scene>
+    </scenes>
+</document>

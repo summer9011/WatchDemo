@@ -1,0 +1,18 @@
+{
+    "aps": {
+        "alert": {
+            "body": "Test message",
+            "title": "Optional title"
+        },
+        "category": "myCategory"
+    },
+    
+    "WatchKit Simulator Actions": [
+        {
+            "title": "查看详情",
+            "identifier": "firstButtonAction"
+        }
+    ],
+    
+    "customKey": "自定义数据"
+}
