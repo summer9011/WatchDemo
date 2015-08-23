@@ -20,16 +20,21 @@
     [super awakeWithContext:context];
 
     // Configure interface objects here.
+    NSLog(@"awakeWithContext");
 }
 
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    
+    NSLog(@"willActivate");
 }
 
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
+    
+    NSLog(@"didDeactivate");
 }
 
 - (IBAction)openView {
